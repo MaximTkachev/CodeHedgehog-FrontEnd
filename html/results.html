@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sideBarStyles.css">
+    <link rel="stylesheet" href="../css/queue.css">
+    <link rel="stylesheet" href="../css/tasks.css">
+    <title id="main-title"></title>
+    <link href="../images/favicon.png" rel="icon" type="image/x-con">
+</head>
+<body id="body-pd">
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <a href="#" class="nav_logo" id="nav-logo">
+                <i class="fas fa-angle-right" id = "header-toggle"></i>
+            </a>
+            <img src="https://code.hits.university/img/black_logo.svg" id="big-background-logo"
+                 class="d-none big-background-logo-visible ms-3">
+            <img src="../images/Vector%201.svg" id="mini-logo" class="ms-3">
+            <div id="nav-link-holder" class="nav-link-holder">
+                <div class="nav_list mt-4" id="nav_list">
+                    <a href="#" class="nav_link active-hidden"> <i class='fas fa-graduation-cap nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-classes">Классы</span> </a>
+                    <a href="#" class="nav_link"> <i class='fas fa-tasks nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-queue">Очередь</span> </a>
+                    <a href="#" class="nav_link">
+                        <i class='fas fa-eye nav_icon position-relative'></i>
+                        <span class="position-absolute translate-middle badge rounded-pill bg-primary notification-pill" id="notification-pill">.</span>
+                        <span class="nav_name nav-name-hidden"><span id="sidebar-postmoderation">Постмодерация</span>
+                                <span class="moderation-pill ms-3">12</span></span>
+                    </a>
+                    <a href="#" class="nav_link"> <i class='fas fa-code nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-languages">Языки</span> </a>
+                    <a href="#" class="nav_link"> <i class='fas fa-users nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-groups">Группы</span> </a>
+                    <a href="#" class="nav_link"> <i class='fas fa-book nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-themes">Темы</span> </a>
+                    <a href="#" class="nav_link"> <i class='fas fa-trophy nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-contests">Контесты</span> </a>
+                    <a href="#" class="nav_link"> <i class='fas fa-file-alt nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-tasks">Задачи</span> </a>
+                    <a href="#" class="nav_link"> <i class='fas fa-user nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-users">Пользователи</span> </a>
+                    <a href="./queue.html" class="nav_link"> <i class='fas fa-language nav_icon'></i>
+                        <span class="nav_name nav-name-hidden" id="sidebar-localization">Локализация</span> </a>
+                </div>
+
+                <div class="profile-card-small mb-3" id="profile-card-small">
+                    <div class="lang-text mb-1" id="small-text-desc">RU</div>
+                    <div>
+                        <img src="../images/IvanIvanov.jpg" class="profile-img-small">
+                    </div>
+                </div>
+
+                <div class="profile-card ms-3 mb-3 d-none" id="profile-card-big">
+                    <div class="lang-picker-holder d-flex mb-3 p-1">
+                        <button class="lang-picker-btn lang-picker-btn-selected" value="RU" onclick="changeLanguage(this.value)"><i class="fas fa-flag me-2"></i>RU</button>
+                        <button class="lang-picker-btn" value="EN" onclick="changeLanguage(this.value)"><i class="far fa-flag me-2"></i>EN</button>
+                    </div>
+
+                    <div class="d-flex over-hidden">
+                        <div>
+                            <img src="../images/IvanIvanov.jpg" class="profile-img">
+                        </div>
+                        <div class="ms-3">
+                            <p class="profile-name"><b id="profile-name">Иван Иванов</b></p>
+                            <p>
+                                <span id="profile-settings">Настройки</span>
+                                <span id="profile-logout">Выход</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+<div>
+    <div class="d-flex" id="navbar">
+        <a class="navbar-item" href="classroom.html"><span class="smiley">📃</span> <span id="navbar-feed">Лента</span></a>
+        <a class="navbar-item navbar-item-selected"><span class="smiley">📝</span> <span id="navbar-tasks">Задачи</span></a>
+        <a class="navbar-item" href="themes.html"><span class="smiley">📚</span>  <span id="navbar-themes">Темы задач</span></a>
+        <a class="navbar-item" href="queue.html"><span class="smiley">⏳</span> <span id="navbar-queue">Очередь</span></a>
+        <a class="navbar-item"><span class="smiley">👀</span> <span id="navbar-postmoderation">Постмодерация</span></a>
+        <a class="navbar-item"><span class="smiley">🏅</span> <span id="navbar-results">Результаты</span></a>
+        <a class="navbar-item"><span class="smiley">👨🏼</span> <span id="navbar-users">Пользователи</span></a>
+        <a class="navbar-item" href="task.html"><span class="smiley">🏆</span> <span id="navbar-rating">Рейтинг</span></a>
+    </div>
+    <div class="pt-4 ms-2 table-holder">
+        <h1 id="page-title">Задачи</h1>
+
+        <div class="d-flex mt-3">
+            <input type="text" class="form-control me-3" placeholder="Название" aria-label="First name" id="input-name">
+            <input type="text" class="form-control me-3" placeholder="Подразделение" aria-label="Last name" id="input-division">
+            <button type="button" class="btn btn-primary" onclick="turnOnTooltips()"><i class="fas fa-search"></i>  <span id="search-btn">Поиск</span></button>
+        </div>
+
+        <div class="tasks pb-2">
+            <table class="table mt-4" id="main-table"></table>
+
+            <table class="d-none" id="table-template">
+                <tr id="header-template">
+                    <td class="first-td"><b>№</b></td>
+                    <td><b id="header-title">Название</b></td>
+                    <td><b id="header-contest">Контест</b></td>
+                    <td><b id="header-points">Баллы</b></td>
+                    <td><b id="header-deadline">Срок</b></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="tr-template">
+                    <td class="first-td text">1</td>
+                    <td class="text"><a href="task.html" class="task-link" id="a-template">Сумма двух чисел</a></td>
+                    <td class="text" id="contest-template">Основы программирования</td>
+                    <td class="text">10</td>
+                    <td class="text" id="date-template">21 июня 2021</td>
+                    <td class="task-pending text" >
+                        <i class="fas fa-eye" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                           id="icon-template" title="Постмодерация <span class='verdict'>ожидание</span>"></i>
+                    </td>
+                    <td>
+                        <div class="link-holder">
+                            <a class="send-btn" id="send-btn-template">Отправить</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <nav class="ms-3">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link page-link-angle" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-angle-left"></i></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link page-link-active" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="ms-1 me-1">...</li>
+                    <li class="page-item"><a class="page-link" href="#">12</a></li>
+                    <li class="page-item"><a class="page-link" href="#">13</a></li>
+                    <li class="page-item"><a class="page-link" href="#">14</a></li>
+                    <li class="page-item">
+                        <a class="page-link page-link-angle" href="#"><i class="fas fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+<script src="../js/sidebar.js"></script>
+<script src="../js/saveStateOfSidebar.js"></script>
+
+<script src="../versions/englishVersion.js"></script>
+<script src="../versions/russianVersion.js"></script>
+<script src="../js/tasks.js"></script>
+<script src="../js/languageSwitcher.js"></script>
+<script src="../js/switchTooltips.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+.list-holder{
+    background: #F2F4F7;
+    border-radius: 8px;
+
+}
+.card-body{
+    background: #F2F4F7;
+    padding: 0;
+    border: 0;
+}
+.theme-title{
+    font-weight: bold;
+    min-height: 48px;
+    max-height: 48px;
+    line-height: 34px;
+}
+p.theme-title-holder{
+    background: white;
+    margin-top: 8px;
+    min-height: 48px;
+    max-height: 48px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+.theme-main-title-holder{
+    min-height: 48px;
+    max-height: 48px;
+}
+.tasks-link{
+    color:rgba(33, 141, 255, 1);
+    line-height: 36px;
+    margin-right: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-decoration: none;
+}
+.tasks-link:hover{
+    background: #F2F8FF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn:focus{
+    box-shadow: 0 0 0 0 ;
+}
+.tasks-card{
+    background: white;
+}
+.task{
+    margin-left: 28px;
+    color: black;
+    text-decoration: none;
+    min-height: 40px;
+}
+.task:hover{
+    cursor: pointer;
+}
+.card{
+    border-radius: 0;
+}
+.collapse, .tasks-card{
+    border-bottom-left-radius: 8px;
+
+    border-bottom-right-radius: 8px;
+}
+.tasks-card{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+#navbar{
+    margin-left: -20px;
+}
+.page-title{
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 48px;
+}
+
+@media screen and (min-width: 1046px) {
+    body {
+        margin: 0;
+    }
+
+    .l-navbar {
+        left: 0;
+        padding: 1rem 0 0;
+    }
+
+    .show-navbar {
+        width: calc(var(--nav-width) + 176px)
+    }
+
+    .body-pd {
+        padding-left: calc(var(--nav-width) + 188px)
+    }
+}
+@media (max-width: 1045px){
+    #big-background-logo, #profile-card-big, .nav_name, #nav-logo{
+        display: none;
+    }
+    #profile-card-small{
+        display: block !important;
+    }
+    .notification-pill{
+        display: inline !important;
+        left: 67% !important;
+    }
+    #mini-logo{
+        display: inline-block !important;
+        margin-top: 66px!important;
+    }
+}

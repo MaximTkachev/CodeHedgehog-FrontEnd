@@ -1,0 +1,126 @@
+td{
+    padding-top: 8px !important;
+}
+span.verdict{
+    font-weight: 700;
+    font-size: 14px;
+}
+.send-btn{
+    line-height: 42px;
+}
+tr.verdict-ok{
+    border-left: 2px solid rgba(56, 239, 118, 1);
+}
+tr.verdict-testing{
+    border-left: 2px solid rgba(242, 201, 56, 1);
+}
+tr.verdict-reject{
+    border-left: 2px solid rgba(245, 92, 111, 1);
+}
+i.verdict-ok{
+    color:rgba(56, 239, 118, 1);
+}
+i.verdict-reject{
+    color:rgba(245, 92, 111, 1);
+}
+.link-holder{
+    max-width: 118px;
+    min-height: 42px;
+    text-align: center;
+    border-radius: 8px;
+}
+.link-holder:hover{
+    cursor: pointer;
+    background: rgba(242, 248, 255, 1);
+}
+.task-link{
+    text-decoration: none;
+    color: black;
+}
+input{
+    background-color: #EDEFF3 !important;
+    max-width: 43% !important;
+}
+.btn-primary{
+    max-width: 14% !important;
+    min-width: 14% !important;
+}
+li.active {
+     background: white !important;
+     border-right: 0 !important;
+}
+
+@media (max-width: 872px) {
+    td, .send-btn, .navbar-item{
+        font-size: 14px;
+    }
+}
+@media (max-width: 1100px){
+    body{
+        padding-left: calc(var(--nav-width));
+    }
+    .table-holder{
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+}
+.text{
+    line-height: 42px;
+}
+#navbar{
+    margin-left: -20px;
+}
+#page-title{
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 48px
+}
+html{
+    min-width: 800px !important;
+}
+@media (max-width: 1000px) {
+    .smiley{
+        display: none;
+    }
+    #navbar-feed{
+        padding-left: 10px;
+    }
+}
+.tooltip-inner{
+    max-width: none;
+}
+
+@media screen and (min-width: 999px) {
+    body {
+        margin: 0;
+    }
+
+    .l-navbar {
+        left: 0;
+        padding: 1rem 0 0;
+    }
+
+    .show-navbar {
+        width: calc(var(--nav-width) + 176px);
+    }
+
+    .body-pd {
+        padding-left: calc(var(--nav-width) + 188px)
+    }
+}
+@media (max-width: 998px){
+    #big-background-logo, #profile-card-big, .nav_name, #nav-logo{
+        display: none;
+    }
+    #profile-card-small{
+        display: block !important;
+    }
+    .notification-pill{
+        display: inline !important;
+        left: 67% !important;
+    }
+    #mini-logo{
+        display: inline-block !important;
+        margin-top: 66px!important;
+    }
+}

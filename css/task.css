@@ -1,0 +1,144 @@
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 260px;
+    }
+}
+.container-lg {
+    margin-left: 0 !important;
+}
+.return-link{
+    font-family: Arial, sans-serif ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.page-title{
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+}
+.table-header {
+    background: #F2F4F7 !important;
+    color: #151617;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+}
+td{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 15px !important;
+}
+.table-item{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #151617;
+}
+.block{
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: max-content;
+    margin-top: 196px;
+    margin-right: 10%;
+    height: 100%;
+}
+@media (max-width: 1000px) {
+    .block{
+        margin-right: 5%;
+    }
+}
+.block-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: sans-serif;
+    color: #151617;
+    margin-bottom: 4px;
+}
+.block-desc{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: sans-serif;
+    color: #151617;
+    margin-bottom: 14px;
+}
+.btn-send{
+    min-width: 100%;
+    border-radius: 0 !important;
+}
+.point-pill{
+    width: 69px;
+    height: 20px;
+    color: #FFFFFF;
+    background: #218DFF;
+    border-radius: 10px;
+    font-family: sans-serif;
+    padding: 3px 8px;
+}
+.number-of-solved{
+    color: rgba(33, 141, 255, 1);
+}
+.page-subtitle{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #151617;
+}
+.container-lg{
+    max-width: 1200px !important;
+}
+.paragraph{
+    margin-bottom: 1rem !important;
+}
+@media (min-width: 968px) {
+    .block{
+        min-width: 200px;
+    }
+}
+html{
+    min-width: 500px;
+}
+
+@media screen and (min-width: 1126px) {
+    body {
+        margin: 0;
+    }
+
+    .l-navbar {
+        left: 0;
+        padding: 1rem 0 0;
+    }
+
+    .show-navbar {
+        width: calc(var(--nav-width) + 176px)
+    }
+
+    .body-pd {
+        padding-left: calc(var(--nav-width) + 188px)
+    }
+}
+@media (max-width: 1125px){
+    #big-background-logo, #profile-card-big, .nav_name, #nav-logo{
+        display: none;
+    }
+    #profile-card-small{
+        display: block !important;
+    }
+    .notification-pill{
+        display: inline !important;
+        left: 67% !important;
+    }
+    #mini-logo{
+        display: inline-block !important;
+        margin-top: 66px!important;
+    }
+}

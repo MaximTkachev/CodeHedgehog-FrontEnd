@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sideBarStyles.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title id="main-title"></title>
+    <link href="../images/favicon.png" rel="icon" type="image/x-con">
+</head>
+<body id="body-pd">
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav_logo" id="nav-logo">
+                    <i class="fas fa-angle-right" id = "header-toggle"></i>
+                </a>
+                <img src="https://code.hits.university/img/black_logo.svg" id="big-background-logo"
+                     class="d-none big-background-logo-visible ms-3">
+                <img src="../images/Vector%201.svg" id="mini-logo" class="ms-3">
+                <div id="nav-link-holder" class="nav-link-holder">
+                    <div class="nav_list mt-4" id="nav_list">
+                        <a href="#" class="nav_link active-hidden"> <i class='fas fa-graduation-cap nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-classes">Классы</span> </a>
+                        <a href="#" class="nav_link"> <i class='fas fa-tasks nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-queue">Очередь</span> </a>
+                        <a href="#" class="nav_link">
+                            <i class='fas fa-eye nav_icon position-relative'></i>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-primary notification-pill" id="notification-pill">.</span>
+                            <span class="nav_name nav-name-hidden"><span id="sidebar-postmoderation">Постмодерация</span>
+                                <span class="moderation-pill ms-3">12</span></span>
+                        </a>
+                        <a href="#" class="nav_link"> <i class='fas fa-code nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-languages">Языки</span> </a>
+                        <a href="#" class="nav_link"> <i class='fas fa-users nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-groups">Группы</span> </a>
+                        <a href="#" class="nav_link"> <i class='fas fa-book nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-themes">Темы</span> </a>
+                        <a href="#" class="nav_link"> <i class='fas fa-trophy nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-contests">Контесты</span> </a>
+                        <a href="#" class="nav_link"> <i class='fas fa-file-alt nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-tasks">Задачи</span> </a>
+                        <a href="#" class="nav_link"> <i class='fas fa-user nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-users">Пользователи</span> </a>
+                        <a href="./queue.html" class="nav_link"> <i class='fas fa-language nav_icon'></i>
+                            <span class="nav_name nav-name-hidden" id="sidebar-localization">Локализация</span> </a>
+                    </div>
+
+                    <div class="profile-card-small mb-3" id="profile-card-small">
+                        <div class="lang-text mb-1" id="small-text-desc">RU</div>
+                        <div>
+                            <img src="../images/IvanIvanov.jpg" class="profile-img-small">
+                        </div>
+                    </div>
+
+                    <div class="profile-card ms-3 mb-3 d-none" id="profile-card-big">
+                        <div class="lang-picker-holder d-flex mb-3 p-1">
+                            <button class="lang-picker-btn lang-picker-btn-selected" value="RU" onclick="changeLanguage(this.value)"><i class="fas fa-flag me-2"></i>RU</button>
+                            <button class="lang-picker-btn" value="EN" onclick="changeLanguage(this.value)"><i class="far fa-flag me-2"></i>EN</button>
+                        </div>
+
+                        <div class="d-flex over-hidden">
+                            <div>
+                                <img src="../images/IvanIvanov.jpg" class="profile-img">
+                            </div>
+                            <div class="ms-3">
+                                <p class="profile-name"><b id="profile-name">Иван Иванов</b></p>
+                                <p>
+                                    <span id="profile-settings">Настройки</span>
+                                    <span id="profile-logout">Выход</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-lg pt-4">
+    <div class="d-flex justify-content-between">
+        <h1 id="navbar-title"></h1>
+        <div class="header-text d-flex">
+            <span class="menu-option"><i class="fas fa-plus"></i><span class="ms-2" id="navbar-create">Создать</span></span>
+            <span class="ms-3 menu-option-selected menu-option"><i class="fas fa-user-plus"></i><span class="ms-2" id="navbar-join">Присоединиться</span></span>
+            <span class="ms-3 menu-option"><i class="fas fa-archive"></i><span class="ms-2" id="navbar-archive">Архив</span></span>
+        </div>
+    </div>
+
+    <div class="d-flex me-3 mb-3">
+        <input type="text" class="form-control me-3" placeholder="Название" aria-label="First name" id="search-title">
+        <input type="text" class="form-control me-3" placeholder="Подразделение" aria-label="Last name" id="search-division">
+        <button type="button" class="btn btn-primary"><i class="fas fa-search"></i><span class="ms-2" id="search-btn">Поиск</span></button>
+    </div>
+
+        <div class="card-holder d-flex justify-content-between" id="card-holder"></div>
+            <div class="card col me-3 p-0 mb-3 d-none" id="card-template">
+                <div class="card-img-top"> </div>
+
+                <div class="card-text d-flex justify-content-between">
+                    <div class="ms-3">
+                        <a class="card-text-title" href="classroom.html" id="card-title">Тестирование задач</a> <br>
+                        <span class="card-text-desc mb-2" id="card-description">НОЦ "Высшая IT школа"</span>
+                    </div>
+                    <i class="fas fa-ellipsis-v me-3 mb-2"></i>
+                </div>
+
+                <div class="card-body pb-0 mt-1">
+                    <ul class="p-0">
+                        <li class="card-li ps-1 rounded-2"><span class="li-span"><i class="far fa-eye"></i>
+                            <span id="menu-postmoderation">Постмодерация</span></span>
+                        </li>
+                        <li class="card-li ps-1 rounded-2"><span class="li-span"><i class="fas fa-list"></i>
+                            <span id="menu-queue">Очередь</span></span>
+                        </li>
+                        <li class="card-li ps-1 rounded-2"><span class="li-span"><i class="far fa-file"></i>
+                            <span id="menu-tasks">Задачи</span></span>
+                        </li>
+                        <li class="card-li ps-1 rounded-2"><span class="li-span"><i class="far fa-user"></i>
+                            <span id="menu-users">Пользователи</span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="../js/sidebar.js"></script>
+<script src="../js/saveStateOfSidebar.js"></script>
+
+<script src="../versions/englishVersion.js"></script>
+<script src="../versions/russianVersion.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/languageSwitcher.js"></script>
+</body>
+</html>
